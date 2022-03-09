@@ -1,7 +1,8 @@
 <?php
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\CssSelector\Node\FunctionNode;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\TemplateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,14 @@ use Symfony\Component\CssSelector\Node\FunctionNode;
 |
 */
 
-Route::get('/',[ProductsController::class,'show']);
+Route::get('/', [TemplateController::class, 'showHomePage']);
+
+Route::get('/product/{id}', [TemplateController::class, 'showProductPage']);
+
+Route::get('/products', [TemplateController::class, 'showProductsPage']);
+
+Route::get('/cart', [TemplateController::class, 'showCartPage']);
+
+Route::get('/about', [TemplateController::class, 'showAboutPage']);
+
+
