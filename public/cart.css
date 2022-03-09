@@ -1,12 +1,13 @@
 .cartTitles{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     border-bottom: solid 1px;
 }
 
 .quantityPrices{
     display: flex;
     justify-content: space-between;
+    width: 50%;
 }
 
 .products{
@@ -19,7 +20,6 @@
 .product{
     display: flex;
     align-items: center;
-    margin-right: 200px;
 }
 
 .products button{
@@ -30,8 +30,14 @@
     border: solid 1px;
 }
 
+.products input{
+    width: 50px;
+    background-color: rgba(12,10,3,0.1);
+}
+
 .reduction{
     display: flex;
+    margin-top: 5px;
 }
 
 .reduction .submit{
