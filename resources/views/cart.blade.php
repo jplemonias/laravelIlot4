@@ -1,11 +1,8 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Mon Panier</title>
-    <link rel="stylesheet" href="cart.css">
-</head>
-<body>
+<<<<<<< HEAD
+=======
+@extends('mainTemplate')
+
+@section('content')
     <h2>Mon Panier</h2>
     <div class="cartTitles">
         <p>PRODUIT</p>
@@ -44,7 +41,7 @@
                 <p>Price</p>
             </div>
             <input type="submit" value="Valider le panier">
-      </div>
+        </div>
     </div>
-</body>
-</html>
+@endsection
+>>>>>>> bd3937535aea992e26c50c836fd7683448522bcc
