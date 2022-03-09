@@ -51,3 +51,6 @@
 </div>
 @endsection
 
+@section('cssSpe')
+    <link rel="stylesheet" href="products.css">
+@endsection
