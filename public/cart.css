@@ -4,17 +4,29 @@
     border-bottom: solid 1px;
 }
 
-.product{
+.quantityPrices{
+    display: flex;
+    justify-content: space-between;
+}
+
+.products{
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px;
+    align-items: center;
 }
 
-.product button{
+.product{
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+}
+
+.products button{
     color: #ff6a6a;
     background-color: #ffdcc8;
     border-radius: 15px;
-    height: 24px;
+    height: 30px;
     border: solid 1px;
 }
 
