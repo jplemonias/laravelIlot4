@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\TemplateController;
@@ -24,3 +24,5 @@ Route::get('/products', [TemplateController::class, 'showProductsPage']);
 Route::get('/cart', [TemplateController::class, 'showCartPage']);
 
 Route::get('/about', [TemplateController::class, 'showAboutPage']);
+
+

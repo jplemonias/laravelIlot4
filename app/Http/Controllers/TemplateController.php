@@ -15,7 +15,7 @@ class TemplateController extends Controller
     {
         return view("products");
     }
-
+    
     public function showProductPage(int $id)
     {
         return view("product",  ['id' => $id]);
