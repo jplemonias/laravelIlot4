@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @extends('mainTemplate')
 
 @section('content')
@@ -44,4 +42,7 @@
         </div>
     </div>
 @endsection
->>>>>>> bd3937535aea992e26c50c836fd7683448522bcc
+
+@section('cssSpe')
+    <link rel="stylesheet" href="cart.css">
+@endsection
