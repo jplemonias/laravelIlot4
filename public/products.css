@@ -13,7 +13,19 @@ main{
 .range input {
     width: 100%;
 }
-
+.catalogue {
+    justify-content: center;
+}
+.color{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.color > div {
+    height: 75px;
+    width: 150px;
+    margin: 10px;
+}
 .color1 {
     background-color: Grey ;
 }
@@ -31,6 +43,10 @@ main{
 }
 
 
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 .cards {
     width: 100%;
     display: flex;

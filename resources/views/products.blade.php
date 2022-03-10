@@ -2,6 +2,8 @@
 @extends('mainTemplate')
 
 @section('content')
+
+<div class="wrapper">
 <div class="catalogue">
     <h2>PARCOURIR LE CATALOGUE</h2>
     <div>
@@ -48,6 +50,7 @@
             <h6>Déco image</h6>
         </div>
     </div>
+</div>
 </div>
 @endsection
 
