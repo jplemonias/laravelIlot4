@@ -1,5 +1,5 @@
 @extends('mainTemplate')
 
 @section('content')
-    <p>contenu de Xxxxxx</p>
+    <p>contenu de {{ $id }}</p>
 @endsection

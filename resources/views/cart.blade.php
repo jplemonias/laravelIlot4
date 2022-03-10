@@ -3,7 +3,6 @@
 @section('title', 'Mon Panier')
 
 @section('content')
-
     <div class="container">
         <h2>Mon Panier</h2>
         <div class="cartTitles">
