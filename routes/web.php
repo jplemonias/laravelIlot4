@@ -24,4 +24,3 @@ Route::get('/products', [TemplateController::class, 'showProductsPage']);
 Route::get('/cart', [TemplateController::class, 'showCartPage']);
 
 Route::get('/about', [TemplateController::class, 'showAboutPage']);
-
