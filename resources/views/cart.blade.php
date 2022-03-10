@@ -5,6 +5,7 @@
 @section('content')
     <div class="container">
         <h2>Mon Panier</h2>
+        <br>
         <div class="cartTitles">
             <p>PRODUIT</p>
             <div class="quantityPrices">
