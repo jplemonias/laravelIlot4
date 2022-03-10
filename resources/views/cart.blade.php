@@ -20,7 +20,7 @@
                 <p>Product Name</p>
             </div>
             <p>Price</p>
-            <input type="number" value="1">
+            <input type="number" value="1" min="0">
             <p>Total Price</p>
         </div>
         <div class="reduction">

@@ -2,6 +2,8 @@
 @extends('mainTemplate')
 
 @section('content')
+
+<div class="wrapper">
 <div class="catalogue">
     <h2>PARCOURIR LE CATALOGUE</h2>
     <div>
@@ -49,5 +51,9 @@
         </div>
     </div>
 </div>
+</div>
 @endsection
 
+@section('cssSpe')
+    <link rel="stylesheet" href="products.css">
+@endsection
