@@ -53,5 +53,5 @@
 @endsection
 
 @section('cssSpe')
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href='css/cart.css'>
 @endsection

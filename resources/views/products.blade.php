@@ -1,5 +1,6 @@
 
 @extends('mainTemplate')
+@inject('cart', 'cart')
 
 @section('content')
 
@@ -56,4 +57,24 @@
 
 @section('cssSpe')
     <link rel="stylesheet" href="products.css">
+@endsection
+
+@section('bdd')
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4" whidth="100%">
+            @foreach ($data as $key => $book)
+                <div class="col">
+                    <a href="product/{{ $key+1 }}" class="card w-100 h-100">
+                        {{ $cart->printImg($book) }}
+                        <div class="card-body">
+                            {{ $cart->printInfosBooks($book) }}
+                        </div>
+                        <div class="card-footer">
+                            {{ $cart->printPrice($book) }}
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection

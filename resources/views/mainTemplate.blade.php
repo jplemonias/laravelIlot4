@@ -71,6 +71,7 @@
                 </ul>
             </div>
         </header>
+        @yield('bdd')
         @yield('content')
         <footer class="footer mt-auto py-3">
             <div class="container">

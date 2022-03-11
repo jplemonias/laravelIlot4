@@ -55,5 +55,5 @@ main{
 .card {
     margin: 2px;
     width: 50px;
-    background-color: thistle;
+    /* background-color: thistle; */
 }
