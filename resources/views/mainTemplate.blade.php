@@ -35,6 +35,10 @@
                 align-items: center;
                 padding-left: revert;
             }
+            footer {
+                background: rgb(3 103 166);
+                color: black;
+            }
         </style>
     </head>
     <body class="antialiased">
@@ -68,9 +72,19 @@
             </div>
         </header>
         @yield('content')
-        <footer class="footer mt-auto py-3 bg-light">
+        <footer class="footer mt-auto py-3">
             <div class="container">
-            <span class="text-muted">Place sticky footer content here.</span>
+                <div>
+                    <p>My Lego Home<br>16 Bd Maréchal Lyautey,<br>38000 Grenoble<br>contact@mylegohome.com</p>
+                </div>
+                <div>
+                    <p>@copyright - tous droits réservés<br>MyLego Home<br>2022</p>
+                </div>
+                <div>
+                    <p>Suivez-nous</p>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-square"></i>
+                </div>
             </div>
         </footer>
     </body>
