@@ -1,5 +1,8 @@
 @extends('mainTemplate')
 
 @section('content')
-    <p>contenu de {{ $id }}</p>
+    <p>contenu de </p>
+
+{{--    foreach ($products as $product)--}}
+    @dd($products);
 @endsection

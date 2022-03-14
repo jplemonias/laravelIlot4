@@ -2,7 +2,15 @@
 
 namespace App\Http\Controllers;
 
-class CartController extends Controller
-{
-//
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+
+
+class CartController extends Controller{
+
 }
+
+
+
+
+
