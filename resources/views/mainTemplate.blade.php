@@ -9,6 +9,18 @@
 
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css">
         <script src="https://kit.fontawesome.com/d70a89f18c.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Style -->
+        <link rel="stylesheet" href="css/style.css">
+
         <title>@yield('title')</title>
 
         <!-- Fonts -->
@@ -62,7 +74,7 @@
                         <path d="M204.057 126.734H192.391C191.673 126.734 191.158 126.494 190.847 126.016C190.536 125.513 190.476 124.855 190.667 124.042C190.715 123.874 191.014 122.51 191.565 119.949C191.661 119.447 191.768 118.932 191.888 118.406C192.008 117.879 192.127 117.329 192.247 116.755C192.893 113.691 193.348 111.609 193.611 110.509C194.209 107.063 194.796 104.586 195.37 103.078C195.49 102.719 195.693 102.396 195.98 102.109C196.291 101.822 196.614 101.63 196.949 101.535C197.38 101.224 197.799 101.068 198.206 101.068L212.564 101.032C213.043 101.032 213.402 101.164 213.641 101.427C213.88 101.69 214 102.025 214 102.432C214 102.935 213.797 103.401 213.39 103.832C212.983 104.263 212.445 104.478 211.774 104.478C205.074 104.478 200.635 104.49 198.457 104.514C198.337 104.801 198.218 105.196 198.098 105.699C198.002 106.201 197.895 106.787 197.775 107.457L197.165 110.58L196.878 111.873L208.939 111.909C209.393 111.909 209.74 112.04 209.98 112.303C210.243 112.567 210.374 112.902 210.374 113.309C210.374 113.835 210.171 114.326 209.764 114.78C209.357 115.211 208.819 115.426 208.149 115.426L201.149 115.355H196.088L194.472 123.216H196.196C200.407 123.264 203.135 123.288 204.38 123.288L208.005 123.252C208.484 123.252 208.843 123.371 209.082 123.611C209.345 123.85 209.477 124.173 209.477 124.58C209.477 125.13 209.274 125.621 208.867 126.052C208.484 126.482 207.957 126.698 207.287 126.698L204.057 126.734Z" fill="black"/>
                     </svg>
                 </a>
-        
+
                 <ul class="nav nav-pills nav-top">
                     <li class="nav-item"><a href="/">Accueil</a></li>
                     <li class="nav-item"><a href="/products">Catalogue</a></li>
@@ -70,6 +82,7 @@
                     <li class="nav-item"><a href="/cart" style="padding-right: 1em"><i class="fa-solid fa-basket-shopping"></i></a><i class="fa-solid fa-magnifying-glass" style="padding-right: 0.5em"></i><input></li>
                 </ul>
             </div>
+
         </header>
         @yield('content')
         <footer class="footer mt-auto py-3">
