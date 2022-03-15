@@ -50,10 +50,23 @@ main{
 .cards {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;    
+    flex-wrap: nowrap;
 }
 .card {
     margin: 2px;
     width: 50px;
     background-color: thistle;
+}
+.results {
+
+
+}
+.table,
+td {
+    border: 1px solid #333;
+}
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
 }

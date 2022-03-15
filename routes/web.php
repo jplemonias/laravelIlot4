@@ -2,8 +2,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\ProductsController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AboutController;
 
 /*
@@ -19,9 +17,9 @@ use App\Http\Controllers\AboutController;
 
 Route::get('/', [TemplateController::class, 'showHomePage']);
 
-Route::get('/product/{id}', [ProductController::class, 'showProductPage']);
+Route::get('/product/{id}', [TemplateController::class, 'showProductPage']);
 
-Route::get('/products', [TemplateController::class, 'showProductsPage']);
+Route::get('/products', [TemplateController::class, 'indexProductsPage']);
 
 Route::get('/cart', [TemplateController::class, 'showCartPage']);
 

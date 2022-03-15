@@ -1,13 +1,9 @@
 
 @extends('mainTemplate')
 
-@section('content')
-
-
     <link rel="stylesheet" href="/app.css">
 
 @section('content')
-    <p>contenu de Marguerite</p>
     <div class="wrapper">
         <div class="catalogue">
             <h2>PARCOURIR NOTRE CATALOGUE</h2>
@@ -18,33 +14,31 @@
                 <div class="type3">Blue</div>
                 <div class="type4">Orange</div>
             </div>
+            @foreach ($products as $product)
+            @endforeach
+            @dd($products)
 
-            <div class="results">
+            <div class="table">
                 <h2>Resultats</h2>
-                <div class="cards">
-                    <div class="card">
-                        <img src="" alt="">
-                        <h6>Déco image</h6>
-                    </div>
-                    <div class="card">
-                        <img src="" alt="">
-                        <h6>Déco image</h6>
-                    </div>
-                    <div class="card">
-                        <img src="" alt="">
-                        <h6>Déco image</h6>
-                    </div>
-                    <div class="card">
-                        <img src="" alt="">
-                        <h6>Déco image</h6>
-                    </div>
-                </div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="2">The table header</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>The table body</td>
+                        <td>with two columns</td>
+                    </tr>
+                    </tbody>
+                </table>
+
             </div>
 
-            {{--  @foreach ($products as $value)
-           @dump($value)
+      @foreach ($products as $product)
            @endforeach
-           {{--    @dd($products)--}}
+           @dd($products)
 
 
 @endsection

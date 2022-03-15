@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TemplateController extends Controller
 {
@@ -11,14 +12,16 @@ class TemplateController extends Controller
         return view("home");
     }
 
-    public function showProductsPage()
+    public function indexProductsPage()
     {
-        return view("products");
+        $products = DB::select('select * from products');
+        return view('products', ['products' => $products]);
     }
-    
+
     public function showProductPage(int $id)
     {
-        return view("product",  ['id' => $id]);
+        $product = DB::select('select * from products where id = ?',[$id]);
+        return view("product",  ['product' => $product]);
     }
 
     public function showCartPage()

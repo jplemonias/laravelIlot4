@@ -4,5 +4,5 @@
     <p>contenu de </p>
 
 {{--    foreach ($products as $product)--}}
-    @dd($products);
+    @dd($product);
 @endsection
