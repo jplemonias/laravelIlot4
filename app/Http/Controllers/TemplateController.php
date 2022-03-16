@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Product;
+
 
 class TemplateController extends Controller
 {
@@ -14,8 +16,10 @@ class TemplateController extends Controller
 
     public function indexProductsPage()
     {
-        $products = DB::select('select * from products');
-        return view('products', ['products' => $products]);
+        $products=Product::all();
+        return view('products', compact('products'));
+//        $products = DB::select('select * from products');
+//        return view('products', ['products' => $products]);
     }
 
     public function showProductPage(int $id)
