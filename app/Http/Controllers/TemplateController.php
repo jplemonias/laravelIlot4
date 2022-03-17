@@ -24,8 +24,9 @@ class TemplateController extends Controller
 
     public function showProductPage(int $id)
     {
-        $product = DB::select('select * from products where id = ?',[$id]);
+        $product = Product::find($id);
         return view("product",  ['product' => $product]);
+
     }
 
     public function showCartPage()

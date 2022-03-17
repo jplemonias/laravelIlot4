@@ -51,6 +51,7 @@
                 background: rgb(3 103 166);
                 color: black;
             }
+
         </style>
     </head>
     <body class="antialiased">
