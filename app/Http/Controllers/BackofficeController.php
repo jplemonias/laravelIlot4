@@ -12,7 +12,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
 class BackofficeController extends Controller
 {
-    public function show()
+    public function show(): View|Factory
     {
         return view('backoffice', ['products' => Product::orderBy('id', 'ASC')->get()]);
     }
@@ -22,22 +22,20 @@ class BackofficeController extends Controller
         return view('backofficeEdit', ['product' => Product::find($id)]);
     }
 
-    public function showCreate()
+    public function showCreate(): View|Factory
     {
         return view('backofficeCreate', ['product' => Product::get()]);
     }
 
-    public function destroy($id)
+    public function destroy(int $id): Redirector|RedirectResponse
     {
-
         $deletedProduct = Product::find($id);
-
         $deletedProduct->delete();
 
         return redirect('/backoffice');
     }
 
-    public function update(Request $request)
+    public function update(Request $request): Redirector|RedirectResponse
     {
         $product = Product::find($request->id);
         $product->name = $request->name;

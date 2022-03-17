@@ -1,6 +1,5 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\BackofficeController;
@@ -16,17 +15,17 @@ use App\Http\Controllers\BackofficeController;
 |
 */
 
-Route::get('/', [TemplateController::class, 'showHomePage']);
+Route::get('/', [ProductsController::class, 'showHomePage']);
 
-Route::get('/product/{id}', [TemplateController::class, 'showProductPage']);
+Route::get('/product/{id}', [ProductsController::class, 'showProductPage']);
 
-Route::get('/products', [TemplateController::class, 'showProductsPage']);
+Route::get('/products', [ProductsController::class, 'showProductsPage']);
 
-Route::get('/productsprice', [TemplateController::class, 'showProductsPagePrice']);
+Route::get('/productsprice', [ProductsController::class, 'showProductsPagePrice']);
 
 Route::get('/cart', [CartController::class, 'showCartPage']);
 
-Route::get('/about', [TemplateController::class, 'showAboutPage']);
+Route::get('/about', [ProductsController::class, 'showAboutPage']);
 
 Route::get('/backoffice', [BackofficeController::class, 'show']);
 
@@ -39,3 +38,7 @@ Route::delete('/backoffice/{id}/destroy', [BackofficeController::class, 'destroy
 Route::get('/backoffice/product/{id}/edit', [BackofficeController::class, 'showEdit']);
 
 Route::post('/backoffice/{id}/update', [BackofficeController::class, 'update'])->name('update');
+
+Route::get('category/{name}/products', [ProductsController::class, 'showCategoryProductPage'])->name('products.category');
+
+Route::get('/categories', [ProductsController::class, 'showCategories']);

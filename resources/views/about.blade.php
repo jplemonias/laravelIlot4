@@ -1,5 +1,5 @@
 @extends('mainTemplate')
 
 @section('content')
-    <p>contenu de Marguerite</p>
+    <p>à propos</p>
 @endsection

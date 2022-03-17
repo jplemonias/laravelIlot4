@@ -3,5 +3,5 @@
 @section('title', 'HomePage')
 
 @section('content')
-    <p>contenu de JP</p>
+    <p>Accueil</p>
 @endsection
