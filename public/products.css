@@ -48,12 +48,22 @@ main{
     margin: 0 auto;
 }
 .cards {
-    width: 100%;
     display: flex;
-    flex-wrap: nowrap;    
 }
+
 .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 2px;
-    width: 50px;
-    background-color: thistle;
+    background-color: #FFCF00;
+}
+
+button{
+    color: #FFCF00;
+    background-color: rgba(19,14,0,0.38);
+    border-radius: 15px;
+    height: 30px;
+    border: solid 1px;
 }

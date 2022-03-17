@@ -88,3 +88,7 @@ h2{
 .totalPrice input:active{
     transform: translateY(4px);
 }
+
+input{
+    border: solid 1px;
+}
