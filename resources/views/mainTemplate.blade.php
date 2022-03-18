@@ -73,14 +73,14 @@
         </header>
         @yield('content')
         <footer class="footer mt-auto py-3">
-            <div class="container">
+            <div class="container" style="display: flex; justify-content: space-between; ">
                 <div>
                     <p>My Lego Home<br>16 Bd Maréchal Lyautey,<br>38000 Grenoble<br>contact@mylegohome.com</p>
                 </div>
-                <div>
+                <div style="text-align: center;">
                     <p>@copyright - tous droits réservés<br>MyLego Home<br>2022</p>
                 </div>
-                <div>
+                <div style="text-align: center;">
                     <p>Suivez-nous</p>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-facebook-square"></i>

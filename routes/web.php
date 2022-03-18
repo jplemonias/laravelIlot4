@@ -17,20 +17,14 @@ use App\Http\Controllers\BackofficeController;
 */
 
 Route::get('/', [TemplateController::class, 'showHomePage']);
-
 Route::get('/product/{id}', [ProductController::class, 'selectOneProduct']);
-
 Route::get('/products', [ProductController::class, 'selectAllProducts']);
-
 Route::get('/cart', [TemplateController::class, 'showCartPage']);
-
 Route::get('/about', [TemplateController::class, 'showAboutPage']);
-
 
 Route::get('/productsByName', [ProductController::class, 'selectAllProductsOrderByName']);
 Route::get('/productsByPrice', [ProductController::class, 'selectAllProductsOrderByPriceAsc']);
 Route::get('/productPrice/{id}', [ProductController::class, 'selectOneProductNameAndPrice']);
-
 
 Route::get('/backoffice', [BackofficeController::class, 'selectIdNamePriceQuantityDescriptionAllProductsByOrderAsc']);
 Route::delete('/deleteProduct/{id}', [BackofficeController::class, 'delete'])->name('deleteProduct');

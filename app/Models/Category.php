@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Category extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = 'products';
+    protected $table = 'categories';
 
-    public function category(){
-        return $this->belongsTo(Category::class);
+    public function product(){
+        return $this->hasMany(Product::class);
     }
 }
