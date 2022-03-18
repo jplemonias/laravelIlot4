@@ -60,6 +60,7 @@ class BackofficeController extends Controller
             'discount' => 0
         ];
         $data['categories'] =  Category::all()->all();
+        // dd($data['categories'][0]->description);
         return view('addProduct', ['data' => $data]);
     }
     
@@ -83,7 +84,7 @@ class BackofficeController extends Controller
         // return view('editProduct', ['data' => $data]);
     }
     
-    public function getCategory(Request $req)
+    public function getOrder(Request $req)
     {
         // $post = Categories::first();
         // dd($post);
