@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,8 @@ Route::get('/products', [TemplateController::class, 'indexProductsPage']);
 Route::get('/cart', [TemplateController::class, 'showCartPage']);
 
 Route::get('/about', [AboutController::class, 'showAboutPage']);
+
+Route::get('/OrderNameproducts', [ProductController::class, 'sortProductName']);
+
+Route::post('/backoffice', [TemplateController::class, 'create']);
+

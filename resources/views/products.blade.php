@@ -18,7 +18,10 @@
         <th scope="col"> Price</th>
         <th scope="col"> Cover</th>
         <th scope="col"> Availability</th>
-        <th scope="col"> Fiche </th>
+        <th scope="col"> Détail Produit</th>
+        <th scope="col"> <align="center">Fiche Produit </th>
+        <th scope="col"></th>
+
     </tr>
     </thead>
     <tbody>
@@ -33,11 +36,17 @@
                 <td><p>{{ $product->image  }}</p></td>
                 <td><p>{{ $product -> available }}</p></td>
                 <td><p><a href="/product/{{$product->id}}"> Voir </a></p></td>
+                <td><p><a href="/ModifyProduct/{{$product->id}}"> Modifier </a></p></td>
+                <td><p><a href="/CreateProduct/{{$product->id}}"> Supprimer </a></p></td>
+
             </tr>
     @endforeach
     </tbody>
     </table>
     <p></p>
+        <table>
+            <td><p><a href="/product/{{$product->id}}"> Créer un produit  </a></p></td>
+        </table>
     <p></p>
 </div>
     @endsection
