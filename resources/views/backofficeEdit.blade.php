@@ -20,6 +20,7 @@
         <p>Réduction </p> <input type='number' name="discount" value="{{ $product->discount }}" min="0" max="100"><br><br>
         <p>image</p> <input type='text' name="image" value="{{$product->image}}" size="100"><br><br>
     <input type="submit" class="btn btn-primary"><br><br>
+        @method('PUT')
     </form>
 @endsection
 

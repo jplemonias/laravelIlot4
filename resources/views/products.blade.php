@@ -17,6 +17,7 @@
         <img src="{{$product->image}}">
         <p>{{$product->price}}</p>
         <a href="/product/{{$product->id}}"><button>Fiche produit</button></a>
+        <button>Ajouter au panier</button>
     </div>
     @endforeach
 </div>

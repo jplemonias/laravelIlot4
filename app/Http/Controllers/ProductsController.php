@@ -37,9 +37,9 @@ class ProductsController extends Controller
         return view('product', ['product' => Product::find($id)]);
     }
 
-    public function showCategoryProductPage(string $category): View|Factory
+    public function showCategoryProductPage($category): View|Factory
     {
-        return view('productCategory', ['products' => Product::find($category)]);
+        return view('productCategory', ['products' => Product::where('category_id', $category)->get()]);
     }
 
     public function showCategories(): View|Factory

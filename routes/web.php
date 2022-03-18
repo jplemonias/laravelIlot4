@@ -37,7 +37,7 @@ Route::delete('/backoffice/{id}/destroy', [BackofficeController::class, 'destroy
 
 Route::get('/backoffice/product/{id}/edit', [BackofficeController::class, 'showEdit']);
 
-Route::post('/backoffice/{id}/update', [BackofficeController::class, 'update'])->name('update');
+Route::put('/backoffice/{id}/update', [BackofficeController::class, 'update'])->name('update');
 
 Route::get('category/{name}/products', [ProductsController::class, 'showCategoryProductPage'])->name('products.category');
 
