@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\Products;
 use DB;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -24,26 +24,26 @@ class ProductsController extends Controller
     {
 
 
-        return view('products', ['products' => Product::orderBy('name', 'ASC')->get()]);
+        return view('products', ['products' => Products::orderBy('name', 'ASC')->get()]);
     }
 
     public function showProductsPagePrice(): View|Factory
     {
-        return view('products', ['products' => Product::orderBy('price', 'ASC')->get()]);
+        return view('products', ['products' => Products::orderBy('price', 'ASC')->get()]);
     }
 
     public function showProductPage(int $id): View|Factory
     {
-        return view('product', ['product' => Product::find($id)]);
+        return view('product', ['product' => Products::find($id)]);
     }
 
     public function showCategoryProductPage($category): View|Factory
     {
-        return view('productCategory', ['products' => Product::where('category_id', $category)->get()]);
+        return view('productCategory', ['products' => Products::where('category_id', $category)->get()]);
     }
 
     public function showCategories(): View|Factory
     {
-        return view('categories', ['categories' => Category::get()]);
+        return view('categories', ['categories' => Category::get(), 'products' => Products::orderBy('name', 'ASC')->get()]);
     }
 }

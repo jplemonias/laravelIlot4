@@ -67,7 +67,7 @@
                     <li class="nav-item"><a href="/">Accueil</a></li>
                     <li class="nav-item"><a href="/products">Catalogue</a></li>
                     <li class="nav-item"><a href="/categories">Categories</a></li>
-                    <li class="nav-item"><a href="/about">A propos</a></li>
+                    <li class="nav-item"><a href="/customers">Utilisateurs</a></li>
                     <li class="nav-item"><a href="/cart" style="padding-right: 1em"><i class="fa-solid fa-basket-shopping"></i></a><i class="fa-solid fa-magnifying-glass" style="padding-right: 0.5em"></i><input></li>
                 </ul>
             </div>

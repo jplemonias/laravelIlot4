@@ -1,6 +1,7 @@
 h2{
     transform: translateX(517px);
     font-weight: bold;
+    width: 50%;
 }
 
 .cartTitles{
@@ -91,4 +92,9 @@ h2{
 
 input{
     border: solid 1px;
+}
+
+img{
+    width: 20%;
+    height: 20%;
 }

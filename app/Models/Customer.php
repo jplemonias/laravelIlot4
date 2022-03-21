@@ -9,7 +9,7 @@ class Customer extends Model
 {
     use HasFactory;
 
-    public function order()
+    public function order(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Order::class);
     }

@@ -2,6 +2,10 @@
 
 @section('title', 'Mon Panier')
 
+@section('cssSpe')
+    <link rel="stylesheet" href="cart.css">
+@endsection
+
 @section('content')
     <div class="container">
         <h2>Mon Panier</h2>
@@ -13,18 +17,17 @@
                 <p>PRIX TOTAL</p>
             </div>
         </div>
-        @foreach($orders as $order)
-            @dump($order->product)
-        <div class="products">
-            <div class="product">
-                <button>x</button>
-{{--                <img src="{{}}">--}}
-                <p>{{$order->products}}</p>
+        @foreach($order->products as $product)
+            <div class="products">
+                <div class="product">
+                    <button>x</button>
+                    <img src="{{$product->image}}">
+                    <p>{{$product->name}}</p>
+                </div>
+                <p>{{$product->price}}</p>
+                <input type="number" value="{{$product->pivot->quantity}}" min="0">
+                <p>{{$product->pivot->quantity * $product->price}}</p>
             </div>
-            <p>{{$order->product}}</p>
-            <input type="number" value="1" min="0">
-            <p>{{}}</p>
-        </div>
         @endforeach
         <div class="reduction">
             <input type="text" placeholder="Bon de réduction">
@@ -54,6 +57,4 @@
     </div>
 @endsection
 
-@section('cssSpe')
-    <link rel="stylesheet" href="cart.css">
-@endsection
+

@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\BackofficeController;
+use App\Http\Controllers\CustomersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,5 @@ Route::put('/backoffice/{id}/update', [BackofficeController::class, 'update'])->
 Route::get('category/{name}/products', [ProductsController::class, 'showCategoryProductPage'])->name('products.category');
 
 Route::get('/categories', [ProductsController::class, 'showCategories']);
+
+Route::get('/customers', [CustomersController::class, 'show']);

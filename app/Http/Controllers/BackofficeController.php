@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Product;
+use App\Http\Requests\StorePostRequest;
+use App\Models\Products;
 use DB;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -10,34 +11,35 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
+
 class BackofficeController extends Controller
 {
     public function show(): View|Factory
     {
-        return view('backoffice', ['products' => Product::orderBy('id', 'ASC')->get()]);
+        return view('backoffice', ['products' => Products::orderBy('id', 'ASC')->get()]);
     }
 
     public function showEdit(int $id): View|Factory
     {
-        return view('backofficeEdit', ['product' => Product::find($id)]);
+        return view('backofficeEdit', ['product' => Products::find($id)]);
     }
 
     public function showCreate(): View|Factory
     {
-        return view('backofficeCreate', ['product' => Product::get()]);
+        return view('backofficeCreate', ['product' => Products::get()]);
     }
 
     public function destroy(int $id): Redirector|RedirectResponse
     {
-        $deletedProduct = Product::find($id);
+        $deletedProduct = Products::find($id);
         $deletedProduct->delete();
 
         return redirect('/backoffice');
     }
 
-    public function update(Request $request): Redirector|RedirectResponse
+    public function update(StorePostRequest $request): Redirector|RedirectResponse
     {
-        $product = Product::find($request->id);
+        $product = Products::find($request->id);
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
@@ -50,9 +52,9 @@ class BackofficeController extends Controller
         return redirect('/backoffice');
     }
 
-    public function create(Request $request): Redirector|RedirectResponse
+    public function create(StorePostRequest $request): Redirector|RedirectResponse
     {
-        $product = Product::create([
+        $product = Products::create([
         'name' => $request->name,
         'description' => $request->description,
         'price' => $request->price,
