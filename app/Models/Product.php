@@ -13,4 +13,15 @@ class Product extends Model
     {
         return this->hasmany(Orders::class);
     }
+
+    public function sortProductPrice()
+    {
+        return this->hasmany(Orders::class);
+    }
+
+    public function showNamePricePage()
+    {
+        return this->hasmany(Orders::class);
+    }
 }
+

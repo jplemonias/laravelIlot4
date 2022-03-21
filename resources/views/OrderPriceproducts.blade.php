@@ -8,25 +8,26 @@
 
 
     <div>
+
         <div class="prod-container">
-            <h4>Classement alphabétique des produits </h4>
-            </br>
+            <h4>Classement des produits par prix</h4>
+        </br>
             <table>
                 <thead>
                 <tr>
-                    <th scope="col"></th>
+                    <th scope="col"> Price</th>
                     <th scope="col"> Name</th>
-
                 </tr>
                 </thead>
                 <tbody>
-              @foreach ($product as $product)
+                @foreach ($product as $product)
                     <tr>
-                        <th scope="row"><a href="/OrderNameproducts/{{ $product->id }}"></a></th>
+{{--                        <th scope="row"><a href="/OrderNameproducts/{{ $product->id }}"></a></th>--}}
+                        <td><p>{{ $product->price }}</p></td>
                         <td><p>{{ $product->name }}</p></td>
                     </tr>
 
-                  @endforeach
+                @endforeach
                 </tbody>
             </table>
             <p></p>
@@ -34,4 +35,3 @@
         </div>
     </div>
 @endsection
-

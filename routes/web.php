@@ -28,5 +28,8 @@ Route::get('/about', [AboutController::class, 'showAboutPage']);
 
 Route::get('/OrderNameproducts', [templateController::class, 'sortProductName']);
 
+Route::get('/OrderPriceproducts', [templateController::class, 'sortProductPrice']);
+
 Route::post('/backoffice', [TemplateController::class, 'create']);
 
+Route::get('/NamePriceProduct/{id}', [TemplateController::class, 'showNamePricePage']);
