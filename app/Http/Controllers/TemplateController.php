@@ -29,6 +29,12 @@ class TemplateController extends Controller
 
     }
 
+    public function sortProductName()
+    {
+        $products = Product::orderby('name', 'asc')->get();
+        return view('OrderNameproducts', ['product' => $products]);
+    }
+
     public function showCartPage()
     {
         return view("cart");

@@ -9,5 +9,8 @@ class Product extends Model
 {
     use HasFactory;
 
-
+    public function sortProductName()
+    {
+        return this->hasmany(Orders::class);
+    }
 }

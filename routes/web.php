@@ -26,7 +26,7 @@ Route::get('/cart', [TemplateController::class, 'showCartPage']);
 
 Route::get('/about', [AboutController::class, 'showAboutPage']);
 
-Route::get('/OrderNameproducts', [ProductController::class, 'sortProductName']);
+Route::get('/OrderNameproducts', [templateController::class, 'sortProductName']);
 
 Route::post('/backoffice', [TemplateController::class, 'create']);
 

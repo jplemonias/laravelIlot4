@@ -11,12 +11,20 @@ class ProductController extends Controller
 {
     public function sortProductName()
     {
-
-        foreach (Product::all() as $product) {
-            return view("OrderNameproducts", [$product->name]);
-        }
+        $products = DB::table('products')->get();
+        foreach ($products as $product)
+            var_dump($product->name);
     }
 }
+
+
+//    {
+//
+//            $product = Product::all($name) {
+//            return view("OrderNameproducts", [$product->name]);
+//        }
+//    }
+///
 //        $product = Product::find($id);
 //        return view("OrderNameproducts",  [orderBy('name') => $product]);
 //    }
@@ -30,9 +38,6 @@ class ProductController extends Controller
 
 
 
-//    $products = DB::table('products')->get();
-//    foreach ($products as $product)
-////    var_dump($product->name);
 //}
 //    public function showProductPage($id)
 //{
