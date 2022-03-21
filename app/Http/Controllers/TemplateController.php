@@ -17,6 +17,7 @@ class TemplateController extends Controller
     public function indexProductsPage()
     {
         $products=Product::all();
+//        return view('backoffice', compact('products'));
         return view('products', compact('products'));
 //        $products = DB::select('select * from products');
 //        return view('products', ['products' => $products]);
@@ -56,4 +57,13 @@ class TemplateController extends Controller
     {
         return view("about");
     }
+
+    public function modifyproduct(int $id) {
+
+        return view("ModifyProduct", ['test']);
+    }
+
+
+
+
 }

@@ -30,6 +30,8 @@ Route::get('/OrderNameproducts', [templateController::class, 'sortProductName'])
 
 Route::get('/OrderPriceproducts', [templateController::class, 'sortProductPrice']);
 
-Route::post('/backoffice', [TemplateController::class, 'create']);
+Route::get('/backoffice', [TemplateController::class, 'indexProductsPage']);
 
 Route::get('/NamePriceProduct/{id}', [TemplateController::class, 'showNamePricePage']);
+
+Route::get('ModifyProduct/{id}', [TemplateController::class, 'modifyproduct']);
