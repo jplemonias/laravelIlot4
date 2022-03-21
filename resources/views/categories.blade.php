@@ -12,7 +12,7 @@
             <div class="card">
                 <p>{{$product->name}}</p>
                 <p>{{$product->category->name}}</p>
-{{--                <img src="/{{$product->image}}">--}}
+                <img src="/{{$product->image}}">
                 <p>{{$product->price}}</p>
                 <a href="/product/{{$product->id}}"><button>Fiche produit</button></a>
                 <button>Ajouter au panier</button>
