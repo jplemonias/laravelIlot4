@@ -45,3 +45,7 @@ Route::get('category/{name}/products', [ProductsController::class, 'showCategory
 Route::get('/categories', [ProductsController::class, 'showCategories']);
 
 Route::get('/customers', [CustomersController::class, 'show']);
+
+Route::delete('/cart/{id}/delete', [CartController::class, 'destroy'])->name('deleteCart');
+
+Route::post('/addtocart', [ProductsController::class, 'update']);

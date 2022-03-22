@@ -9,8 +9,8 @@ class Category extends Model
 {
     use HasFactory;
 
-    public function product(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function products(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Products::class);
+        return $this->hasMany(Product::class);
     }
 }

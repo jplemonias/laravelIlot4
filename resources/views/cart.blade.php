@@ -20,7 +20,11 @@
         @foreach($order->products as $product)
             <div class="products">
                 <div class="product">
-                    <button>x</button>
+                    <form method="post" class="delete_form" action="{{route('deleteCart' ,$product->id)}}">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="X" class="btn btn-danger">
+                    </form>
                     <img src="{{$product->image}}">
                     <p>{{$product->name}}</p>
                 </div>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\StorePostRequest;
-use App\Models\Products;
+use App\Models\Product;
 use DB;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -16,22 +16,22 @@ class BackofficeController extends Controller
 {
     public function show(): View|Factory
     {
-        return view('backoffice', ['products' => Products::orderBy('id', 'ASC')->get()]);
+        return view('backoffice', ['products' => Product::orderBy('id', 'ASC')->get()]);
     }
 
     public function showEdit(int $id): View|Factory
     {
-        return view('backofficeEdit', ['product' => Products::find($id)]);
+        return view('backofficeEdit', ['product' => Product::find($id)]);
     }
 
     public function showCreate(): View|Factory
     {
-        return view('backofficeCreate', ['product' => Products::get()]);
+        return view('backofficeCreate', ['product' => Product::get()]);
     }
 
     public function destroy(int $id): Redirector|RedirectResponse
     {
-        $deletedProduct = Products::find($id);
+        $deletedProduct = Product::find($id);
         $deletedProduct->delete();
 
         return redirect('/backoffice');
@@ -39,7 +39,7 @@ class BackofficeController extends Controller
 
     public function update(StorePostRequest $request): Redirector|RedirectResponse
     {
-        $product = Products::find($request->id);
+        $product = Product::find($request->id);
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
@@ -54,7 +54,7 @@ class BackofficeController extends Controller
 
     public function create(StorePostRequest $request): Redirector|RedirectResponse
     {
-        $product = Products::create([
+        $product = Product::create([
         'name' => $request->name,
         'description' => $request->description,
         'price' => $request->price,
