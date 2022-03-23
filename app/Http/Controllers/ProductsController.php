@@ -47,7 +47,7 @@ class ProductsController extends Controller
 
     public function showCategories(): View|Factory
     {
-        return view('categories', ['products' => Product::orderBy('category_id', 'ASC')->get()]);
+        return view('categories', ['categories' => Category::get()]);
     }
 
     public function update(StorePostRequest $request): Redirector|RedirectResponse

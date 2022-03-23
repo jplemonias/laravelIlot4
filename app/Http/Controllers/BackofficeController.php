@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\StorePostRequest;
+use App\Http\Requests\UpdatePostRequest;
 use App\Models\Product;
 use DB;
 use Illuminate\Contracts\View\Factory;
@@ -37,7 +38,7 @@ class BackofficeController extends Controller
         return redirect('/backoffice');
     }
 
-    public function update(StorePostRequest $request): Redirector|RedirectResponse
+    public function update(UpdatePostRequest $request): Redirector|RedirectResponse
     {
         $product = Product::find($request->id);
         $product->name = $request->name;
