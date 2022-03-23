@@ -20,7 +20,7 @@
             @csrf
 
             @method('DELETE')
-            <td><input type="submit" value="Delete" class="btn btn-danger"></input></td>
+            <td><input type="submit" value="Delete" class="btn btn-danger"></td>
         </form>
     </tr>
     @endforeach
