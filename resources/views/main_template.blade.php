@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -71,16 +72,17 @@
                 </ul>
             </div>
         </header>
+        @yield('bdd')
         @yield('content')
         <footer class="footer mt-auto py-3">
-            <div class="container" style="display: flex; justify-content: space-between; ">
+            <div class="container">
                 <div>
                     <p>My Lego Home<br>16 Bd Maréchal Lyautey,<br>38000 Grenoble<br>contact@mylegohome.com</p>
                 </div>
-                <div style="text-align: center;">
+                <div>
                     <p>@copyright - tous droits réservés<br>MyLego Home<br>2022</p>
                 </div>
-                <div style="text-align: center;">
+                <div>
                     <p>Suivez-nous</p>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-facebook-square"></i>
@@ -89,3 +91,7 @@
         </footer>
     </body>
 </html>
+
+
+ 
+

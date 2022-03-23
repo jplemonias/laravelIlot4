@@ -9,13 +9,14 @@ class Product extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = 'products';
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
 
-    public function order(){
-        return $this->hasMany(Orders::class);
+    public  function orders()
+    {
+        return $this->belongsToMany(Order::class)->withPivot('quantity');
     }
 }

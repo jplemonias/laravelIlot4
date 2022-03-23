@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-    public $timestamps = false;
-    protected $table = 'categories';
-
-    public function product(){
+    
+    public function products()
+    {
         return $this->hasMany(Product::class);
     }
 }
+
+

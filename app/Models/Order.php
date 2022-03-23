@@ -9,6 +9,15 @@ class Order extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = 'orders';
-    
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
+    public function products ()
+    {
+        
+        return $this->belongsToMany(Product::class)->withPivot('quantity');
+    }
 }
