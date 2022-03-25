@@ -1,20 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Exceptions\Handler;
 use Illuminate\Http\Request;
-use App\Models\Product;
-use App\Models\Category;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Category;
+use App\Models\Customer;
+use App\Models\Order;
+use App\Models\Product;
 
 class BackofficeController extends Controller
 {
     public function selectIdNamePriceQuantityDescriptionAllProductsByOrderAsc()
     {
         $data = Product::orderby('name', 'asc')->select('id', 'name', 'price', 'quantity', 'description', 'category_id')->get();
-        foreach($data as $product){
-            $product->category_id = $product->category->name;
-        }
         return view('backofficeProduct', ['data' => $data]);
     }
 
@@ -27,7 +26,7 @@ class BackofficeController extends Controller
     public function put(int $id, Request $req)
     {
         $edit = $req->input();
-        Product::where('id', $id)->update(array(
+        Product::where('id', $id)->update([
             'name' =>  $edit['name'],
             'description' =>  $edit['description'],
             'quantity' =>  $edit['quantity'],
@@ -36,7 +35,7 @@ class BackofficeController extends Controller
             'weight' =>  $edit['weight'],
             'category_id' =>  $edit['category_id'],
             'discount' =>  $edit['discount']
-        ));
+        ]);
         return redirect('backoffice')->with('','');
     }
     
@@ -59,7 +58,7 @@ class BackofficeController extends Controller
             'category_id' => 1,
             'discount' => 0
         ];
-        $data['categories'] =  Category::all()->all();
+        $data['categories'] = Category::all()->all();
         // dd($data['categories'][0]->description);
         return view('addProduct', ['data' => $data]);
     }
@@ -81,14 +80,37 @@ class BackofficeController extends Controller
         ];
         Product::insert($data);
         return redirect('backoffice')->with('','');
-        // return view('editProduct', ['data' => $data]);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-    public function getOrder(Request $req)
+    public function selectAllOrders()
     {
-        // $post = Categories::first();
-        // dd($post);
-        // $post->category;
-        // $post->category();
+        $data = Order::all();
+        return view('backofficeOrders', ['data' => $data]);
+    }
+
+    public function selectOneOrder(int $id)
+    {
+        $data = Order::find($id);
+        if ($data) {
+            return view('backofficeOrder', ['data' => $data]);
+        }
+        else {
+            return abort(404);
+        }
     }
 }

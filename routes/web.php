@@ -34,3 +34,8 @@ Route::put('/editProduct/{id}', [BackofficeController::class, 'put'])->name('put
 
 Route::get('/addNewProduct', [BackofficeController::class, 'addProduct']);
 Route::post('/insertProduct', [BackofficeController::class, 'post'])->name('postProduct');
+
+Route::get('/backoffice/orders', [BackofficeController::class, 'selectAllOrders']);
+
+Route::get('/backoffice/order/{id}', [BackofficeController::class, 'selectOneOrder']);
+Route::delete('/deleteProduct/{id}', [BackofficeController::class, 'delete'])->name('deleteProduct');

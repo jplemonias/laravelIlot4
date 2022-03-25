@@ -8,19 +8,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Order extends Model
+class Customer extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = 'orders';
-
-    public function customer(): BelongsTo
+    protected $table = 'customers';
+    
+    public function orders(): BelongsToMany
     {
-        return $this->belongsTo(Customer::class);
+        return $this->belongsToMany(Order::class);
     }
 
-    public function products()
-    {
-        return $this->belongsToMany(Product::class);
-    }
 }

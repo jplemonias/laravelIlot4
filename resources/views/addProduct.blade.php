@@ -10,6 +10,7 @@
                         @method('post')
                         @csrf
                         <div class="card-body">
+                            
                             <h5 class="card-title">{{$data['name']}}</h5>
                             <!-- Name -->
                             <div class="row g-3">
